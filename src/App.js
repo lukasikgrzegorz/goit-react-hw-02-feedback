@@ -7,16 +7,10 @@ class App extends Component {
 		bad: 0,
 	};
 
-	addGood = () => {
-		this.setState((state) => ({ good: state.good + 1 }));
-	};
-
-	addNeutral = () => {
-		this.setState((state) => ({ neutral: state.neutral + 1 }));
-	};
-
-	addBad = () => {
-		this.setState((state) => ({ bad: state.bad + 1 }));
+	handleFeedback = (e) => {
+		const { name } = e.target;
+		console.log(name);
+		this.setState((state) => ({ [name]: state[name] + 1 }));
 	};
 
 	countTotalFeedback = () => {
@@ -36,13 +30,13 @@ class App extends Component {
 			<>
 				<div>
 					<h2>Please leave feedback</h2>
-					<button type="button" onClick={this.addGood}>
+					<button type="button" name="good" onClick={this.handleFeedback}>
 						Good
 					</button>
-					<button type="button" onClick={this.addNeutral}>
+					<button type="button" name="neutral" onClick={this.handleFeedback}>
 						Neutral
 					</button>
-					<button type="button" onClick={this.addBad}>
+					<button type="button" name="bad" onClick={this.handleFeedback}>
 						Bad
 					</button>
 				</div>
