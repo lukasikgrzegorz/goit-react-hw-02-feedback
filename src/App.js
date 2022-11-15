@@ -33,10 +33,10 @@ class App extends Component {
 		const positivePercentage = this.countPositiveFeedbackPercentage();
 		return (
 			<>
-				<Section title="Please leave feedback">
+				<Section title={"Please leave feedback"}>
 					<FeedbackOptions options={actualState} onLeaveFeedback={this.handleFeedback} />
 				</Section>
-				<Section title="Statistics">
+				<Section title={"Statistics"}>
 					{total ? (
 						<Statisctics
 							good={good}
