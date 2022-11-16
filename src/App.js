@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Statisctics from "./Components/Statistics/Statistics";
-import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
-import Section from "./Section/Section";
-import Notification from "./Notification/Notification";
+import FeedbackOptions from "./Components/FeedbackOptions/FeedbackOptions";
+import Section from "./Components/Section/Section";
+import Notification from "./Components/Notification/Notification";
+import "./index.css";
 
 class App extends Component {
 	state = {
